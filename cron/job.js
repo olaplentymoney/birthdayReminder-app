@@ -2,7 +2,7 @@ const cron = require("node-cron");
 const User = require("../models/User");
 const sendBirthdayEmail = require("../utils/mailer");
 
-cron.schedule("* * * * *", async () => {
+cron.schedule("0 7 * * *", async () => {
   console.log("Checking birthdays...");
 
   const today = new Date();
